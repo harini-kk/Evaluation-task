@@ -13,6 +13,11 @@ module.exports = {
         "15px": "15px",
         "40px": "40px"
       },
+      borderRadius: {
+        '28px': '28px',
+        '26px': '26px',
+        '20px': '20px'
+      },
       colors: {
         primary: '#F95B5B',
         secondary: '#0084D4',
