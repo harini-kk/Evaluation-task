@@ -7,7 +7,7 @@ function AnnouncementBar() {
       }}
     >
       <p className="pt-[5px] pb-1 mx-8 lg:mx-16 text-sm sm:text-[17px] font-normal font-roboto text-center uppercase">
-        Breakpoint 2023 - New City. New Vibes - Get Early Access ->
+        Breakpoint 2023 - New City. New Vibes - Get Early Access {"->"}
       </p>
     </div>
   );
