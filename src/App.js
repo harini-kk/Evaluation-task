@@ -1,10 +1,10 @@
-import logo from './logo.svg';
 import './App.css';
+import AnnouncementBar from './components/announcementBar';
 
 function App() {
   return (
     <div className="App">
-     Evaluation task
+     <AnnouncementBar/>
     </div>
   );
 }
