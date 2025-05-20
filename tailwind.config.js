@@ -10,12 +10,14 @@ module.exports = {
         manrope: ["Manrope", "sans-serif"],
       },
       fontSize: {
-        "40px": "40px",
+        "15px": "15px",
+        "40px": "40px"
       },
       colors: {
         primary: '#F95B5B',
         secondary: '#0084D4',
-        gray: '#6D6D6D'
+        gray: '#6D6D6D',
+        darkgray: '#3D3D3D'
       },
     },
   },
