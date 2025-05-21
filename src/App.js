@@ -1,6 +1,7 @@
 import "./App.css";
 import AnnouncementBar from "./components/announcementBar";
 import ConferenceIntro from "./components/ConferenceIntro";
+import ReservationForm from "./components/ReservationForm";
 import WhoShouldAttend from "./components/WhoShouldAttend";
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
       <AnnouncementBar />
       <ConferenceIntro />
       <WhoShouldAttend />
+      <ReservationForm/>
     </div>
   );
 }
