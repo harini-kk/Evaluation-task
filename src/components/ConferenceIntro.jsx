@@ -20,7 +20,7 @@ export default function ConferenceIntro() {
           <h2 className="font-montserrat text-3xl lg:text-40px lg:leading-[56px] font-semibold text-darkgray mb-8">
             What is the Return and Reinvent Conference?
           </h2>
-          <div className="pl-[17px] font-roboto text-lg leading-[24px]">
+          <div className="lg:pl-[17px] font-roboto text-lg leading-[24px]">
             <p className="mb-6 text-gray">
               The Return and Reinvent Community Conference is a one-of-a-kind
               event that bridges the gap for women, caretakers, and
@@ -40,7 +40,7 @@ export default function ConferenceIntro() {
               professionals looking to re-enter or pivot in their careers. With
               rapid technological changes
             </p>
-            <button className="bg-[#F95B5B] font-manrope text-white text-xl lg:text-2xl font-bold px-9 py-[18px] rounded-xl w-fit">
+            <button className="bg-[#F95B5B] font-manrope text-white text-xl lg:text-2xl font-bold px-[18px] md:px-9 py-[18px] rounded-xl w-fit">
               Learn more about us
             </button>
           </div>
