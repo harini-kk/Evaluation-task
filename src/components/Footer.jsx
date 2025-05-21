@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="px-8 lg:px-16 bg-[#F5EBDB] font-manrope">
+    <footer className="px-8 lg:px-16 bg-tertiary font-manrope">
       <div className="pt-[57px] grid grid-cols-1 md:grid-cols-5 gap-7 items-end">
         <div className="md:col-span-2">
           <img
@@ -14,7 +14,7 @@ export default function Footer() {
         </div>
 
         <div className="text-base">
-          <h3 className="text-[#FF4F5A] font-bold mb-5">Support</h3>
+          <h3 className="text-primary font-bold mb-5">Support</h3>
           <ul className="font-medium text-gray">
             <li className="mb-4"><a href="#">Getting Started</a></li>
             <li className="mb-4"><a href="#">FAQS</a></li>
@@ -25,7 +25,7 @@ export default function Footer() {
         </div>
 
         <div className="text-base">
-          <h3 className="text-[#FF4F5A] font-bold mb-5">Services</h3>
+          <h3 className="text-primary font-bold mb-5">Services</h3>
           <ul className="font-medium text-gray">
             <li className="mb-4"><a href="#">Booking appointments</a></li>
             <li className="mb-4"><a href="#">Online consultations</a></li>
@@ -36,7 +36,7 @@ export default function Footer() {
         </div>
 
         <div className="text-base">
-          <h3 className="text-[#FF4F5A] font-bold mb-5">Legal</h3>
+          <h3 className="text-primary font-bold mb-5">Legal</h3>
           <ul className="font-medium text-gray">
             <li className="mb-4"><a href="#">Terms & Conditions</a></li>
             <li className="mb-4"><a href="#">Privacy Policy</a></li>
@@ -47,9 +47,9 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="border-t border-[#FF4F5A] mt-10 pb-9">
+      <div className="border-t border-primary mt-10 pb-9">
         <div className="flex flex-col md:flex-row justify-between items-center gap-3">
-          <div className="flex gap-3 text-[#FF4F5A] text-xl mt-[30px]">
+          <div className="flex gap-3 text-primary text-xl mt-[30px]">
             <a href="#" aria-label="Facebook"><img src="/assets/facebook-logo.png" className="h-8" alt="Facebook logo" /></a>
             <a href="#" aria-label="Instagram"><img src="/assets/instagram-logo.png" className="h-8" alt="Instagram logo" /></a>
             <a href="#" aria-label="LinkedIn"><img src="/assets/linkedin-logo.png" className="h-8" alt="LinkedIn logo" /></a>
