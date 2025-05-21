@@ -50,10 +50,10 @@ export default function Footer() {
       <div className="border-t border-primary mt-10 pb-9">
         <div className="flex flex-col md:flex-row justify-between items-center gap-3">
           <div className="flex gap-3 text-primary text-xl mt-[30px]">
-            <a href="#" aria-label="Facebook"><img src="/assets/facebook-logo.png" className="h-8" alt="Facebook logo" /></a>
-            <a href="#" aria-label="Instagram"><img src="/assets/instagram-logo.png" className="h-8" alt="Instagram logo" /></a>
-            <a href="#" aria-label="LinkedIn"><img src="/assets/linkedin-logo.png" className="h-8" alt="LinkedIn logo" /></a>
-            <a href="#" aria-label="YouTube"><img src="/assets/youtube-logo.png" className="h-8" alt="Youtube logo" /></a>
+            <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook"><img src="/assets/facebook-logo.png" className="h-8" alt="Facebook logo" /></a>
+            <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram"><img src="/assets/instagram-logo.png" className="h-8" alt="Instagram logo" /></a>
+            <a href="https://www.linkedin.com/" target="_blank" aria-label="LinkedIn"><img src="/assets/linkedin-logo.png" className="h-8" alt="LinkedIn logo" /></a>
+            <a href="https://www.youtube.com/" target="_blank" aria-label="YouTube"><img src="/assets/youtube-logo.png" className="h-8" alt="Youtube logo" /></a>
           </div>
           <p className="text-base font-bold text-darkgray text-center md:text-right">
             HealNet 2024 © All Rights Reserved
