@@ -40,9 +40,9 @@ export default function ConferenceIntro() {
               professionals looking to re-enter or pivot in their careers. With
               rapid technological changes
             </p>
-            <button className="bg-primary font-manrope text-white text-xl lg:text-2xl font-bold px-[18px] md:px-9 py-[18px] rounded-xl w-fit">
+            <a href="#" className="bg-primary font-manrope text-white text-xl lg:text-2xl font-bold px-[18px] md:px-9 py-[18px] rounded-xl w-fit">
               Learn more about us
-            </button>
+            </a>
           </div>
         </div>
       </div>

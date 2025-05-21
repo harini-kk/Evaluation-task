@@ -17,12 +17,20 @@ describe("ConferenceIntro", () => {
     expect(img).toHaveAttribute("src", "/assets/conference.jpg");
   });
 
-  it("renders the learn more button", () => {
-    render(<ConferenceIntro />);
-    const button = screen.getByRole("button", { name: /learn more about us/i });
-    expect(button).toBeInTheDocument();
+  describe("ConferenceIntro component", () => {
+    it("renders the Learn More link with a valid href", () => {
+      render(<ConferenceIntro />);
+
+      const learnMoreLink = screen.getByRole("link", {
+        name: /learn more about us/i,
+      });
+
+      expect(learnMoreLink).toBeInTheDocument();
+      expect(learnMoreLink).toHaveAttribute("href");
+      expect(learnMoreLink.getAttribute("href")).not.toBe("");
+    });
   });
-  
+
   it("uses mobile-first flex layout with responsive row on large screens", () => {
     const { container } = render(<ConferenceIntro />);
     const flexWrapper = container.querySelector("div.flex");
