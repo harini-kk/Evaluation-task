@@ -86,7 +86,7 @@ export default function ReservationForm() {
               onChange={handleEmailChange}
               placeholder="Enter Your Email Address"
               aria-label="Email Address"
-              className="text-gray rounded-xl p-[18px] w-full placeholder:text-base placeholder:font-semibold focus:outline-none"
+              className="text-gray rounded-xl p-[18px] w-full text-sm sm:text-base placeholder:font-semibold focus:outline-none"
             />
             {emailError && (
               <p className="text-error text-sm mt-1">{emailError}</p>
@@ -115,7 +115,7 @@ export default function ReservationForm() {
               onChange={handlePhoneChange}
               placeholder="Enter Your Contact Number"
               aria-label="Phone Number"
-              className="text-gray rounded-xl p-[18px] w-full placeholder:font-base placeholder:font-semibold focus:outline-none"
+              className="text-gray rounded-xl p-[18px] w-full text-sm sm:text-base placeholder:font-semibold focus:outline-none"
             />
             {phoneError && (
               <p className="text-error text-sm mt-1">{phoneError}</p>
