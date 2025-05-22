@@ -1,14 +1,14 @@
 import "./App.css";
-import AnnouncementBar from "./components/announcementBar";
 import ConferenceIntro from "./components/ConferenceIntro";
 import Footer from "./components/Footer";
+import Header from "./components/header";
 import ReservationForm from "./components/ReservationForm";
 import WhoShouldAttend from "./components/WhoShouldAttend";
 
 function App() {
   return (
     <div className="App">
-      <AnnouncementBar />
+      <Header />
       <ConferenceIntro />
       <WhoShouldAttend />
       <ReservationForm />
