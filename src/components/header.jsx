@@ -16,7 +16,7 @@ function Header() {
     <>
       <AnnouncementBar />
       <header
-        className="w-full bg-white sticky top-0 z-50"
+        className="w-full bg-white sticky top-0 z-30"
         style={{ boxShadow: "0px 4px 4px 0px #0000000D" }}
       >
         <div className="mx-8 lg:mx-16 py-3 flex justify-between items-center gap-2">
