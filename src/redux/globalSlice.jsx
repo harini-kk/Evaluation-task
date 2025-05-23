@@ -2,11 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   user: null,
-  profile: null,
-  token: null,
-  theme: null,
   works: null,
-  exp: null,
 };
 
 const globalSlice = createSlice({
@@ -21,17 +17,6 @@ const globalSlice = createSlice({
       state.token = action.payload?.token;
       state.exp = action.payload?.exp;
     },
-    logout: (state) => {
-      Object.assign(state, initialState);
-      localStorage.removeItem("appState");
-      localStorage.clear();
-    },
-    setProfile: (state, action) => {
-      state.profile = action.payload;
-    },
-    setTheme: (state, action) => {
-      state.theme = action.payload;
-    },
     setWorks: (state, action) => {
       state.works = action.payload;
     },
@@ -40,9 +25,6 @@ const globalSlice = createSlice({
 
 export const {
   setUser,
-  logout,
-  setProfile,
-  setTheme,
   setWorks,
 } = globalSlice.actions;
 
