@@ -1,7 +1,12 @@
+import store from "../redux/store";
 export const API_BASE_URL = process.env.REACT_APP_API_URL;
-export const authToken = process.env.REACT_APP_JWT_TOKEN;
-export const apiRequest = async (endpoint, method, data = null, isFormData = false) => {
-
+export const apiRequest = async (
+  endpoint,
+  method,
+  data = null,
+  isFormData = false
+) => {
+  const authToken = store.getState().app.token;
   const headers = {
     Authorization: `JWT ${authToken}`,
   };

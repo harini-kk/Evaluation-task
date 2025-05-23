@@ -1,13 +1,15 @@
 import InputField from "../components/inputField";
 import { mediaUpload } from "../utils/media"
 import MediaUpload from "../components/mediaUpload";
+import { getAuthToken } from "../utils/auth";
+import { setUser } from "../redux/globalSlice"
 import {
   createWork,
   removeWork,
   updateUser,
   updateWork,
 } from "../utils/works";
-import { useState, useRef } from "react";
+import { useEffect, useState, useRef } from "react";
 import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
 import { useDispatch, useSelector } from "react-redux";
@@ -27,6 +29,31 @@ export default function Works() {
   const [mediaLoading, setMediaLoading] = useState(false);
   const [deleteLoading, setDeleteLoading] = useState(false);
   const formRef = useRef(null);
+  const [loadingAuth, setLoadingAuth] = useState(true);
+
+  useEffect(() => {
+    const loginWithEnv = async () => {
+      try {
+        const res = await getAuthToken(
+          process.env.REACT_APP_ADMIN_EMAIL,
+          process.env.REACT_APP_ADMIN_PASSWORD
+        );
+        if (res?.token) {
+          dispatch(setUser({ token: res.token, user: res.user }));
+          setLoadingAuth(false);
+        } else {
+          console.error("Login failed. Token missing.");
+          navigate("/login");
+        }
+      } catch (err) {
+        console.error("Auto-login failed:", err);
+        navigate("/login");
+      }
+    };
+
+    loginWithEnv();
+  }, [dispatch, navigate]);
+
 
   const openModal = (work) => {
     setUploadedMedia(null);

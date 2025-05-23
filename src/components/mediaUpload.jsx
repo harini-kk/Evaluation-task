@@ -156,7 +156,7 @@ export default function MediaUpload({
                       <div
                         key={media.id}
                         ref={index === existingMedia.length - 1 ? lastMediaRef : null}
-                        className={`relative p-1 rounded-md ${selectedExistingMedia?.id === media?.id ? "border-2 border-blue-600" : "hover:scale-105"}`}
+                        className={`relative p-1 rounded-md h-fit ${selectedExistingMedia?.id === media?.id ? "border-2 border-blue-600" : "hover:scale-105"}`}
                         onClick={() => {
                           setSelectedExistingMedia(media);
                           setUploadedMedia(media);

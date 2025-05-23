@@ -26,6 +26,12 @@ module.exports = {
         darkgray: '#3D3D3D',
         error: '#c20000'
       },
+      maxWidth: {
+        '3xl': '860px',
+      },
+      height: {
+        '70': '270px'
+      }
     },
   },
   plugins: [],
