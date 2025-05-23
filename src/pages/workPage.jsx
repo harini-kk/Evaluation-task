@@ -31,7 +31,6 @@ export default function Works() {
   const [mediaLoading, setMediaLoading] = useState(false);
   const [deleteLoading, setDeleteLoading] = useState(false);
   const formRef = useRef(null);
-  const [loadingAuth, setLoadingAuth] = useState(true);
 
   useEffect(() => {
     if (modalOpen) {
@@ -54,7 +53,6 @@ export default function Works() {
         );
         if (res?.token) {
           dispatch(setUser({ token: res.token, user: res.user }));
-          setLoadingAuth(false);
         } else {
           console.error("Login failed. Token missing.");
           navigate("/login");
@@ -186,7 +184,7 @@ export default function Works() {
   };
   return (
     <div className="flex justify-center">
-      <div className="my-8 grid grid-cols-1 min-[480px]:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      <div className="my-12 sm:my-24 grid grid-cols-1 min-[480px]:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         <div
           className="w-full h-70 min-[480px]:w-48 min-[480px]:h-56 flex items-center justify-center border border-[#B2B2B2] bg-[#EBEBEB] rounded-md cursor-pointer"
           onClick={() => openModal(null)}
@@ -220,7 +218,7 @@ export default function Works() {
             ) : (
               <img
                 src={work?.works?.url || "/assets/gallery_icon.png"}
-                alt="Work Image"
+                alt="Gallery icon"
                 className={`${
                   work?.works?.url ? "w-full h-full" : "w-10 h-10"
                 } object-cover`}

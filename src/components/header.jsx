@@ -29,17 +29,17 @@ function Header() {
             <a href="/works" className="flex items-center border-b-2 border-black/0 hover:scale-105 hover:border-primary">
               <p>Works</p>
             </a>
-            <a href="#" className="flex items-center border-b-2 border-black/0 hover:scale-105 hover:border-primary">
+            <a href="/" className="flex items-center border-b-2 border-black/0 hover:scale-105 hover:border-primary">
               <p>Attend</p>
             </a>
             <div className="relative group">
-              <a href="#" className="flex items-center border-b-2 border-black/0 hover:scale-105 hover:border-primary">
+              <a href="/" className="flex items-center border-b-2 border-black/0 hover:scale-105 hover:border-primary">
                 Sponsors <img src="/assets/arrow-down.svg" alt="Expand" />
               </a>
               <ul className="absolute left-0 top-full mt-2 bg-white shadow-lg rounded-md text-black font-normal opacity-0 group-hover:opacity-100 group-hover:visible invisible transition-all duration-150 z-10 p-4 min-w-[250px]">
                 <li>
                   <a
-                    href="#"
+                    href="/"
                     className="border-b-2 border-black/0 hover:scale-105 hover:border-primary"
                   >
                     Sponsor Benefits
@@ -47,7 +47,7 @@ function Header() {
                 </li>
                 <li>
                   <a
-                    href="#"
+                    href="/"
                     className="border-b-2 border-black/0 hover:scale-105 hover:border-primary"
                   >
                     Sponsor Packages
@@ -57,29 +57,29 @@ function Header() {
             </div>
 
             <div className="relative group">
-              <a href="#" className="flex items-center border-b-2 border-black/0 hover:scale-105 hover:border-primary">
+              <a href="/" className="flex items-center border-b-2 border-black/0 hover:scale-105 hover:border-primary">
                 Speakers <img src="/assets/arrow-down.svg" alt="Expand" />
               </a>
               <ul className="absolute left-0 top-full mt-2 bg-white shadow-lg rounded-md text-black font-normal opacity-0 group-hover:opacity-100 group-hover:visible invisible transition-all duration-150 p-4 z-10 min-w-[250px]">
                 <li>
-                  <a href="#" className="border-b-2 border-black/0 hover:scale-105 hover:border-primary">
+                  <a href="/" className="border-b-2 border-black/0 hover:scale-105 hover:border-primary">
                     Keynotes
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="border-b-2 border-black/0 hover:scale-105 hover:border-primary">
+                  <a href="/" className="border-b-2 border-black/0 hover:scale-105 hover:border-primary">
                     Speaker List
                   </a>
                 </li>
               </ul>
             </div>
-            <a href="#" className="flex items-center border-b-2 border-black/0 hover:scale-105 hover:border-primary">
+            <a href="/" className="flex items-center border-b-2 border-black/0 hover:scale-105 hover:border-primary">
               <p>Session Catalog</p>
             </a>
-            <a href="#" className="flex items-center border-b-2 border-black/0 hover:scale-105 hover:border-primary">
+            <a href="/" className="flex items-center border-b-2 border-black/0 hover:scale-105 hover:border-primary">
               <p>About Us</p>
             </a>
-            <a href="#" className="flex items-center border-b-2 border-black/0 hover:scale-105 hover:border-primary">
+            <a href="/" className="flex items-center border-b-2 border-black/0 hover:scale-105 hover:border-primary">
               <p>Contact Us</p>
             </a>
           </nav>
@@ -124,19 +124,19 @@ function Header() {
                 </a>
               </li>
               <li>
-                <a href="#" onClick={toggleMenu} className="py-2 border-b-2 border-black/0 hover:scale-105 hover:border-primary">
+                <a href="/" onClick={toggleMenu} className="py-2 border-b-2 border-black/0 hover:scale-105 hover:border-primary">
                   Attend
                 </a>
               </li>
               <li>
                 <div>
-                  <a href="#" onClick={toggleMenu} className="py-2 border-b-2 border-black/0 hover:scale-105 hover:border-primary">
+                  <a href="/" onClick={toggleMenu} className="py-2 border-b-2 border-black/0 hover:scale-105 hover:border-primary">
                     Sponsors
                   </a>
                   <ul className="mr-4 space-y-1 my-3">
                     <li>
                       <a
-                        href="#"
+                        href="/"
                         onClick={toggleMenu}
                         className="py-2 border-b-2 border-black/0 hover:scale-105 hover:border-primary"
                       >
@@ -145,7 +145,7 @@ function Header() {
                     </li>
                     <li>
                       <a
-                        href="#"
+                        href="/"
                         onClick={toggleMenu}
                         className="py-2 border-b-2 border-black/0 hover:scale-105 hover:border-primary"
                       >
@@ -157,18 +157,18 @@ function Header() {
               </li>
               <li>
                 <div>
-                  <a href="#" onClick={toggleMenu} className="py-2 border-b-2 border-black/0 hover:scale-105 hover:border-primary">
+                  <a href="/" onClick={toggleMenu} className="py-2 border-b-2 border-black/0 hover:scale-105 hover:border-primary">
                     Speakers
                   </a>
                   <ul className="mr-4 space-y-1 my-3">
                     <li>
-                      <a href="#" onClick={toggleMenu} className="py-2 border-b-2 border-black/0 hover:scale-105 hover:border-primary">
+                      <a href="/" onClick={toggleMenu} className="py-2 border-b-2 border-black/0 hover:scale-105 hover:border-primary">
                         Keynotes
                       </a>
                     </li>
                     <li>
                       <a
-                        href="#"
+                        href="/"
                         onClick={toggleMenu}
                         className="py-2 border-b-2 border-black/0 hover:scale-105 hover:border-primary"
                       >
@@ -179,17 +179,17 @@ function Header() {
                 </div>
               </li>
               <li>
-                <a href="#" onClick={toggleMenu} className="py-2 border-b-2 border-black/0 hover:scale-105 hover:border-primary">
+                <a href="/" onClick={toggleMenu} className="py-2 border-b-2 border-black/0 hover:scale-105 hover:border-primary">
                   Session Catalog
                 </a>
               </li>
               <li>
-                <a href="#" onClick={toggleMenu} className="py-2 border-b-2 border-black/0 hover:scale-105 hover:border-primary">
+                <a href="/" onClick={toggleMenu} className="py-2 border-b-2 border-black/0 hover:scale-105 hover:border-primary">
                   About Us
                 </a>
               </li>
               <li>
-                <a href="#" onClick={toggleMenu} className="py-2 border-b-2 border-black/0 hover:scale-105 hover:border-primary">
+                <a href="/" onClick={toggleMenu} className="py-2 border-b-2 border-black/0 hover:scale-105 hover:border-primary">
                   Contact Us
                 </a>
               </li>
