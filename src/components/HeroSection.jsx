@@ -14,12 +14,12 @@ const HeroSection = () => {
       />
       <div className="mx-8 lg:mx-16 flex flex-col lg:flex-row items-center">
         <div className="w-full lg:w-[49%]">
-          <h1 className="text-4xl lg:text-6xl font-semibold font-montserrat text-darkgray mb-[38px]">
+          <h1 className="pt-12 lg:pt-8 2xl:pt-0 text-4xl lg:text-5xl 2xl:text-6xl font-semibold font-montserrat text-darkgray mb-[38px]">
             Return and Reinvent
             <br />
             Community Conference 2025
           </h1>
-          <p className="text-primary text-base lg:text-lg text-secondary font-roboto">
+          <p className="text-base lg:text-lg text-secondary font-roboto">
             Empowering Women, Caretakers, and Professionals to Navigate and
             Thrive
           </p>
