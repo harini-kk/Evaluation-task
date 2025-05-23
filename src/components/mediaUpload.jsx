@@ -126,14 +126,14 @@ export default function MediaUpload({
           <button
             type="button"
             onClick={() => document.getElementById("fileInput").click()}
-            className={`${path === "profile" ? "text-[8px]" : "text-xs"} p-2 bg-blue-600 text-white rounded-md`}
+            className={`${path === "profile" ? "text-[8px]" : "text-xs"} p-2 bg-primary text-white rounded-md`}
           >
             Upload new Media
           </button>
           <button
             type="button"
             onClick={() => setIsMediaModal(true)}
-            className={`${path === "profile" ? "text-[7px]" : "text-xs ml-2"} p-2 bg-blue-600 text-white rounded-md`}
+            className={`${path === "profile" ? "text-[7px]" : "text-xs ml-2"} p-2 bg-primary text-white rounded-md`}
           >
             Choose from existing
           </button>
@@ -156,7 +156,7 @@ export default function MediaUpload({
                       <div
                         key={media.id}
                         ref={index === existingMedia.length - 1 ? lastMediaRef : null}
-                        className={`relative p-1 rounded-md h-fit ${selectedExistingMedia?.id === media?.id ? "border-2 border-blue-600" : "hover:scale-105"}`}
+                        className={`relative p-1 rounded-md h-fit ${selectedExistingMedia?.id === media?.id ? "border-2 border-primary" : "hover:scale-105"}`}
                         onClick={() => {
                           setSelectedExistingMedia(media);
                           setUploadedMedia(media);
@@ -178,7 +178,7 @@ export default function MediaUpload({
                     ))}
                   </div>
                   <div className="flex px-8 mt-4 justify-end">
-                    <button onClick={handleSelectMedia} className="p-2 bg-blue-600 text-white rounded-md">
+                    <button onClick={handleSelectMedia} className="p-2 bg-primary text-white rounded-md">
                       Select
                     </button>
                   </div>

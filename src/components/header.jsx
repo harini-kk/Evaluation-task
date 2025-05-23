@@ -26,8 +26,8 @@ function Header() {
             className="w-3/5 sm:w-[310px] h-auto"
           />
           <nav className="hidden xl:flex items-center gap-[11px] text-[17px] font-helvetica">
-            <a href="#" className="flex items-center border-b-2 border-black/0 hover:scale-105 hover:border-primary">
-              <p>Faq</p>
+            <a href="/works" className="flex items-center border-b-2 border-black/0 hover:scale-105 hover:border-primary">
+              <p>Works</p>
             </a>
             <a href="#" className="flex items-center border-b-2 border-black/0 hover:scale-105 hover:border-primary">
               <p>Attend</p>
@@ -119,8 +119,8 @@ function Header() {
           <nav className="xl:hidden h-screen text-end pt-5 bg-white px-8 pb-6 text-[17px] font-helvetica border-t border-gray-200 overflow-y-auto">
             <ul className="space-y-2">
               <li>
-                <a href="#" onClick={toggleMenu} className="py-2 border-b-2 border-black/0 hover:scale-105 hover:border-primary">
-                  Faq
+                <a href="/works" onClick={toggleMenu} className="py-2 border-b-2 border-black/0 hover:scale-105 hover:border-primary">
+                  Works
                 </a>
               </li>
               <li>

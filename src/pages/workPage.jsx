@@ -1,14 +1,9 @@
 import InputField from "../components/inputField";
-import { mediaUpload } from "../utils/media"
+import { mediaUpload } from "../utils/media";
 import MediaUpload from "../components/mediaUpload";
 import { getAuthToken } from "../utils/auth";
-import { setUser } from "../redux/globalSlice"
-import {
-  createWork,
-  removeWork,
-  updateUser,
-  updateWork,
-} from "../utils/works";
+import { setUser } from "../redux/globalSlice";
+import { createWork, removeWork, updateUser, updateWork } from "../utils/works";
 import { useEffect, useState, useRef } from "react";
 import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
@@ -20,8 +15,15 @@ export default function Works() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const data = useSelector((state) => state?.app?.works || []);
-  const works = [...data].sort((a, b) => new Date(b.updatedAt) - new Date(a.updatedAt));
-  const { register, handleSubmit, setValue, formState: { errors } } = useForm();
+  const works = [...data].sort(
+    (a, b) => new Date(b.updatedAt) - new Date(a.updatedAt)
+  );
+  const {
+    register,
+    handleSubmit,
+    setValue,
+    formState: { errors },
+  } = useForm();
   const [selectedWork, setSelectedWork] = useState(null);
   const [modalOpen, setModalOpen] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -30,6 +32,18 @@ export default function Works() {
   const [deleteLoading, setDeleteLoading] = useState(false);
   const formRef = useRef(null);
   const [loadingAuth, setLoadingAuth] = useState(true);
+
+  useEffect(() => {
+    if (modalOpen) {
+      document.body.classList.add("overflow-hidden");
+    } else {
+      document.body.classList.remove("overflow-hidden");
+    }
+
+    return () => {
+      document.body.classList.remove("overflow-hidden");
+    };
+  }, [modalOpen]);
 
   useEffect(() => {
     const loginWithEnv = async () => {
@@ -54,13 +68,17 @@ export default function Works() {
     loginWithEnv();
   }, [dispatch, navigate]);
 
-
   const openModal = (work) => {
     setUploadedMedia(null);
     setSelectedWork(work);
     if (work) {
       Object.keys(work).forEach((key) => setValue(key, work[key]));
-      setValue("date", work?.date ? new Date(work.date).toISOString().split("T")[0] : new Date().toISOString().split("T")[0]);
+      setValue(
+        "date",
+        work?.date
+          ? new Date(work.date).toISOString().split("T")[0]
+          : new Date().toISOString().split("T")[0]
+      );
     } else {
       setValue("title", "");
       setValue("description", "");
@@ -81,7 +99,9 @@ export default function Works() {
     if (!file) return;
     const allowedTypes = ["image/", "video/"];
     if (!allowedTypes.some((type) => file?.type?.startsWith(type))) {
-      toast.error("Unsupported file format. Only images and videos are allowed.");
+      toast.error(
+        "Unsupported file format. Only images and videos are allowed."
+      );
       return;
     }
 
@@ -113,9 +133,13 @@ export default function Works() {
       let result;
       if (selectedWork) {
         result = await updateWork(payload, selectedWork?.id, navigate);
-        dispatch(setWorks(works.map((item) =>
-          item.id === result.doc.id ? { ...item, ...result.doc } : item
-        )));
+        dispatch(
+          setWorks(
+            works.map((item) =>
+              item.id === result.doc.id ? { ...item, ...result.doc } : item
+            )
+          )
+        );
         toast.success("Work updated successfully");
       } else {
         result = await createWork(payload, navigate);
@@ -129,7 +153,9 @@ export default function Works() {
       }
       closeModal();
     } catch (error) {
-      toast.error(error?.message || "An error occurred while updating your work");
+      toast.error(
+        error?.message || "An error occurred while updating your work"
+      );
     } finally {
       setLoading(false);
     }
@@ -139,7 +165,9 @@ export default function Works() {
     setDeleteLoading(true);
     try {
       await removeWork(selectedWork?.id, navigate);
-      const updatedWorkIds = works.map(work => work.id).filter(id => id && id !== selectedWork?.id);
+      const updatedWorkIds = works
+        .map((work) => work.id)
+        .filter((id) => id && id !== selectedWork?.id);
       const response = await updateUser({ work: updatedWorkIds }, navigate);
       dispatch(setWorks(response?.doc?.work));
       toast.success("Work deleted successfully!");
@@ -164,7 +192,7 @@ export default function Works() {
           onClick={() => openModal(null)}
         >
           <div className="text-center">
-            <div className="mx-auto bg-[#264FD6] text-white w-16 h-16 flex items-center justify-center rounded-full">
+            <div className="mx-auto bg-primary text-white w-16 h-16 flex items-center justify-center rounded-full">
               <img
                 src="/assets/plus.png"
                 alt="Add new work"
@@ -279,7 +307,7 @@ export default function Works() {
                   type="button"
                   disabled={loading}
                   onClick={handleFormSubmit}
-                  className={`px-4 py-2 bg-blue-600 text-white rounded-md flex items-center gap-2.5 ${
+                  className={`px-4 py-2 bg-primary text-white rounded-md flex items-center gap-2.5 ${
                     loading && "opacity-80"
                   }`}
                 >
