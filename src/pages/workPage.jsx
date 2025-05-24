@@ -9,7 +9,7 @@ import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
 import { useDispatch, useSelector } from "react-redux";
 import { setWorks } from "../redux/globalSlice";
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router";
 
 export default function Works() {
   const dispatch = useDispatch();

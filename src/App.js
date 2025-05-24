@@ -1,5 +1,5 @@
 import "./App.css";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router";
 import ConferenceIntro from "./components/ConferenceIntro";
 import Footer from "./components/Footer";
 import Header from "./components/header";
