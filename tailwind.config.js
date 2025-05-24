@@ -21,9 +21,17 @@ module.exports = {
       colors: {
         primary: '#F95B5B',
         secondary: '#0084D4',
+        tertiary: '#F5EBDB',
         gray: '#6D6D6D',
-        darkgray: '#3D3D3D'
+        darkgray: '#3D3D3D',
+        error: '#c20000'
       },
+      maxWidth: {
+        '3xl': '860px',
+      },
+      height: {
+        '70': '270px'
+      }
     },
   },
   plugins: [],
